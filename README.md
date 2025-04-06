@@ -4,8 +4,6 @@ Welcome to **carp.io** – the ultimate tool to track your daily progress and st
 
 ![Carp.io Gif](https://media.giphy.com/media/ytBTxD4T3slivJxRaR/giphy.gif?cid=790b76117vwia25jfby3mm2nmzocoivq1wvtx2irjgont5a9&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
-### Slogan:
-
 **"Track Progress, Share Success."**
 
 ## Features
