@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carp-auth-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: carp-auth
+  template:
+    metadata:
+      labels:
+        app: carp-auth
+    spec:
+      containers:
+        - name: carp-auth
+          image: dritaaa/carp-auth
+          env:
+            - name: MONGO_URI
+              value: "mongodb://auth-mongo-srv:27017/auth"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: carp-auth-srv
+spec:
+  selector:
+    app: carp-auth
+  ports:
+    - name: carp-auth
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
