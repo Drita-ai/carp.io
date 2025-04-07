@@ -1,1 +1,1 @@
-export * from "./catch-async/catchAsync";
+export { default as catchAsync } from "./catch-async/catchAsync";
