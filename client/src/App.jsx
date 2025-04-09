@@ -1,16 +1,19 @@
-import { Input } from "@heroui/react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Track from "./pages/Track";
+import CreateUser from "./pages/CreateUser";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <div className="text-[#6e6e6e] text-2xl ">
-        <h1>Track Progress, Share Success.</h1>
-      </div>
-      <div className="flex w-full flex-wrap md:flex-nowrap gap-4 bg-red">
-        <Input label="@username" type="text" />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<CreateUser />} />
+        <Route path="track" element={<Track />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
