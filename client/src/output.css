@@ -962,6 +962,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1113,6 +1117,10 @@ video {
   height: calc(100dvh - var(--navbar-height));
 }
 
+.h-\[calc\(100vh-10em\)\] {
+  height: calc(100vh - 10em);
+}
+
 .h-\[var\(--navbar-height\)\] {
   height: var(--navbar-height);
 }
@@ -1144,6 +1152,26 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[calc\(100vh-5em\)\] {
+  height: calc(100vh - 5em);
+}
+
+.h-\[calc\(100vh\)\] {
+  height: calc(100vh);
+}
+
+.h-\[calc\(100vh-20\)\] {
+  height: calc(100vh - 20);
+}
+
+.h-\[calc\(100vh-20em\)\] {
+  height: calc(100vh - 20em);
+}
+
+.h-\[calc\(100vh-15em\)\] {
+  height: calc(100vh - 15em);
 }
 
 .max-h-\[20rem\] {
@@ -1246,6 +1274,10 @@ video {
   min-height: 32px;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-1 {
   width: 0.25rem;
 }
@@ -1294,12 +1326,12 @@ video {
   width: 1.5rem;
 }
 
-.w-64 {
-  width: 16rem;
-}
-
 .w-7 {
   width: 1.75rem;
+}
+
+.w-72 {
+  width: 18rem;
 }
 
 .w-8 {
@@ -1362,10 +1394,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-72 {
-  width: 18rem;
 }
 
 .min-w-10 {
@@ -2036,12 +2064,6 @@ video {
   margin-left: calc(0.125rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2264,10 +2286,6 @@ video {
 
 .border-small {
   border-width: var(--heroui-border-width-small);
-}
-
-.border-1\.5 {
-  border-width: 1.5px;
 }
 
 .border-x-\[calc\(theme\(spacing\.5\)\/2\)\] {
@@ -2585,6 +2603,11 @@ video {
   background-color: hsl(var(--heroui-background) / 0.8);
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+
 .bg-content1 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--heroui-content1) / var(--heroui-content1-opacity, var(--tw-bg-opacity)));
@@ -2746,11 +2769,6 @@ video {
   background-color: hsl(var(--heroui-secondary) / 0.2);
 }
 
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
-}
-
 .bg-success {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--heroui-success) / var(--heroui-success-opacity, var(--tw-bg-opacity)));
@@ -2806,11 +2824,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-b {
@@ -3523,10 +3536,6 @@ video {
   -moz-osx-font-smoothing: auto;
 }
 
-.accent-green-500 {
-  accent-color: #22c55e;
-}
-
 .opacity-0 {
   opacity: 0;
 }
@@ -3551,6 +3560,10 @@ video {
   opacity: 0.5;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .opacity-70 {
   opacity: 0.7;
 }
@@ -3569,10 +3582,6 @@ video {
 
 .opacity-disabled {
   opacity: var(--heroui-disabled-opacity);
-}
-
-.opacity-60 {
-  opacity: 0.6;
 }
 
 .\!shadow-none {
@@ -5480,6 +5489,11 @@ video {
   background-color: hsl(var(--heroui-foreground) / var(--heroui-foreground-opacity, var(--tw-bg-opacity))) !important;
 }
 
+.hover\:bg-blue-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-danger:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--heroui-danger) / var(--heroui-danger-opacity, var(--tw-bg-opacity)));
@@ -5518,11 +5532,6 @@ video {
 .hover\:bg-warning-50:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--heroui-warning-50) / var(--heroui-warning-50-opacity, var(--tw-bg-opacity)));
-}
-
-.hover\:bg-blue-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-danger-600:hover {
@@ -9434,12 +9443,6 @@ video {
 
   .group[data-hover="true"] .sm\:group-data-\[hover\=true\]\:data-\[visible\=true\]\:opacity-100[data-visible="true"] {
     opacity: 1;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:flex-nowrap {
-    flex-wrap: nowrap;
   }
 }
 
