@@ -1,11 +1,14 @@
-import { UserCircleIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
+
+import driaxImg from "./../assets/user/driax.jpeg"
 
 export default function Profile() {
     const todayCompleted = 5
     const todayTotal = 8
     const monthCompleted = 42
     const monthTotal = 60
+
+    const USERNAME = "driax"
 
     const [todayProgress, setTodayProgress] = useState(0)
     const [monthProgress, setMonthProgress] = useState(0)
@@ -23,12 +26,16 @@ export default function Profile() {
     return (
         <div className="h-[calc(100vh-10em)] w-full">
             <div className="w-full h-full p-6 grid grid-cols-3 grid-rows-2 gap-6">
-
                 {/* User Profile */}
-                <div className="col-span-1 row-span-2 bg-indigo-400 rounded-2xl p-6 text-white shadow-lg flex flex-col justify-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                    <UserCircleIcon className="w-16 h-16 mb-4 text-white/90" />
-                    <h2 className="text-xl font-bold">Username</h2>
-                    <p className="text-sm mt-1">User ID: <span className="font-mono">abc123</span></p>
+                <div className="col-span-1 row-span-2 bg-indigo-400 rounded-2xl p-6 text-white shadow-lg flex flex-col justify-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl items-center">
+                    <div className="w-[200px] h-[200px] rounded-full overflow-hidden mb-4 mx-auto">
+                        <img
+                            src={driaxImg}
+                            alt="Profile"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <h2 className="text-xl font-bold text-gray-800 mt-5">@{USERNAME}</h2>
                 </div>
 
                 {/* Public Dashboard */}
@@ -41,7 +48,7 @@ export default function Profile() {
                         rel="noopener noreferrer"
                         className="block mt-4 p-2 bg-white/70 hover:bg-white text-gray-800 rounded-md font-mono shadow-inner transition duration-200"
                     >
-                        carp.io/u/abc123 ↗
+                        carp.io/u/{USERNAME} ↗
                     </a>
                 </div>
 
