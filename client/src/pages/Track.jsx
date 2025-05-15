@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Card, CardBody } from "@heroui/react";
+
+import Button from '../components/Button';
 import SearchBar from "../components/SearhcBar";
 import Cwraps from "../components/track/Cwraps";
+import Modal from '../components/track/TrackModal'
 
 function Track() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       <div className="my-4">
@@ -13,12 +18,12 @@ function Track() {
 
       <div className="w-[50%] space-y-3 my-5 p-6 rounded-xl shadow-lg bg-[#1a1a1a]">
         <div className="flex justify-end">
-          <button className="px-4 py-2 text-sm font-medium bg-white text-black border border-neutral-600 rounded-md hover:bg-neutral-400 transition-colors duration-200">
-            Add Carp
-          </button>
+          <Button text="Add Carps" onClick={() => setShowModal(true)} />
         </div>
         <Cwraps />
       </div>
+
+      {showModal && <Modal setShowModal={setShowModal} />}
     </div>
   );
 }
